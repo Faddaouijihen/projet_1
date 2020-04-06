@@ -6,12 +6,20 @@
 <title>test</title>
 </head>
 <body>
-<h1>hello <%=request.getParameter("name")%>
+<% 
+if(request.getParameter("name")==null){
+%>
+<p>Saisir Votre Nom</p>
+<%
+}else{%>
+<b>hello</b>
+<%=request.getParameter("name") %>
+<%} %>
 
 
 
 
 
-</h1>
+
 </body>
 </html>
